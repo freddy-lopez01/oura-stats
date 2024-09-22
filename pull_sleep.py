@@ -73,23 +73,6 @@ def plot_data(data):
 
     plt.show()
 
-def chat_plot(data):
-    df = pd.DataFrame(list(data.items()), columns=['ID', 'Timestamp'])
-
-    df['Timestamp'] = pd.to_datetime(df['Timestamp'])
-
-    df = df.sort_values('Timestamp')
-
-    plt.figure(figsize=(12, 6))
-    plt.plot(df['Timestamp'], range(len(df)), marker='o')
-    plt.title('Timestamps Over Time')
-    plt.xlabel('Timestamp')
-    plt.ylabel('Index')
-    plt.xticks(rotation=45)
-    plt.grid()
-    plt.tight_layout()
-    plt.show()
-
 
 
 def main():
