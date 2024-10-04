@@ -72,6 +72,7 @@ def plot_data(data):
     plt.grid(True)
 
     plt.show()
+    return datetime_objects
 
 
 
@@ -79,9 +80,10 @@ def main():
     resp = pull_sleep()
     selected_data = extract_sleep(resp)
 
-    print(selected_data)
 
-    plot_data(selected_data)
+    d = plot_data(selected_data)
+
+    print(d)
 
 
 if __name__ == "__main__":
